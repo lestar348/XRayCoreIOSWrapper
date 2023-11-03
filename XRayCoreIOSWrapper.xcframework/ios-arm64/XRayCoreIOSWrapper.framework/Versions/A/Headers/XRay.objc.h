@@ -11,11 +11,22 @@
 #include "Universe.objc.h"
 
 
+@class XRayCustomHandler;
 @protocol XRayLogger;
 @class XRayLogger;
 
 @protocol XRayLogger <NSObject>
 - (void)logInput:(NSString* _Nullable)s;
+@end
+
+@interface XRayCustomHandler : NSObject <goSeqRefInterface> {
+}
+@property(strong, readonly) _Nonnull id _ref;
+
+- (nonnull instancetype)initWithRef:(_Nonnull id)ref;
+- (nonnull instancetype)init;
+// skipped method CustomHandler.Handle with unsupported parameter or return types
+
 @end
 
 FOUNDATION_EXPORT void XRaySetMemoryLimit(void);
