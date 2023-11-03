@@ -4,20 +4,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "XrayCoreMobileWrapperIOS",
+    name: "XRayCoreIOSWrapper",
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "XrayCoreMobileWrapperIOS",
-            targets: ["XrayCoreMobileWrapperIOS"]),
+            name: "XRayCoreIOSWrapper",
+            targets: ["XRayCoreIOSWrapper"]),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "XrayCoreMobileWrapperIOS"),
-        .testTarget(
-            name: "XrayCoreMobileWrapperIOSTests",
-            dependencies: ["XrayCoreMobileWrapperIOS"]),
+        .binaryTarget(
+          name: "XRayCoreIOSWrapper",
+          path: "XRayCoreIOSWrapper.xcframework"
+        )
+
     ]
 )
