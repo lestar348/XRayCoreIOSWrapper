@@ -11,7 +11,6 @@
 #include "Universe.objc.h"
 
 
-@class XRayCustomHandler;
 @protocol XRayLogger;
 @class XRayLogger;
 
@@ -19,17 +18,30 @@
 - (void)logInput:(NSString* _Nullable)s;
 @end
 
-@interface XRayCustomHandler : NSObject <goSeqRefInterface> {
-}
-@property(strong, readonly) _Nonnull id _ref;
-
-- (nonnull instancetype)initWithRef:(_Nonnull id)ref;
-- (nonnull instancetype)init;
-// skipped method CustomHandler.Handle with unsupported parameter or return types
-
-@end
+/**
+ * Ser AssetsDirectory in Xray env
+ */
+FOUNDATION_EXPORT void XRaySetAssetsDirectory(NSString* _Nullable path);
 
 FOUNDATION_EXPORT void XRaySetMemoryLimit(void);
+
+/**
+ * [key] can be:
+PluginLocation  = "xray.location.plugin"
+ConfigLocation  = "xray.location.config"
+ConfdirLocation = "xray.location.confdir"
+ToolLocation    = "xray.location.tool"
+AssetLocation   = "xray.location.asset"
+UseReadV         = "xray.buf.readv"
+UseFreedomSplice = "xray.buf.splice"
+UseVmessPadding  = "xray.vmess.padding"
+UseCone          = "xray.cone.disabled"
+BufferSize           = "xray.ray.buffer.size"
+BrowserDialerAddress = "xray.browser.dialer"
+XUDPLog              = "xray.xudp.show"
+XUDPBaseKey          = "xray.xudp.basekey"
+ */
+FOUNDATION_EXPORT void XRaySetXrayEnv(NSString* _Nullable key, NSString* _Nullable path);
 
 FOUNDATION_EXPORT BOOL XRayStartXray(NSData* _Nullable config, id<XRayLogger> _Nullable logger, NSError* _Nullable* _Nullable error);
 
