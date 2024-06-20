@@ -19,6 +19,11 @@
 @end
 
 /**
+ * / Real ping
+ */
+FOUNDATION_EXPORT BOOL XRayMeasureOutboundDelay(NSData* _Nullable config, NSString* _Nullable url, int64_t* _Nullable ret0_, NSError* _Nullable* _Nullable error);
+
+/**
  * Ser AssetsDirectory in Xray env
  */
 FOUNDATION_EXPORT void XRaySetAssetsDirectory(NSString* _Nullable path);
