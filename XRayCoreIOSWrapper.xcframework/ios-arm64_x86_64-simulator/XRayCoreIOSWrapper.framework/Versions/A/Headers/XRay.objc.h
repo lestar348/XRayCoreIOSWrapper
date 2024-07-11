@@ -18,6 +18,9 @@
 - (void)logInput:(NSString* _Nullable)s;
 @end
 
+// skipped function MeasureOutboundDelay with unsupported parameter or return types
+
+
 /**
  * Ser AssetsDirectory in Xray env
  */
