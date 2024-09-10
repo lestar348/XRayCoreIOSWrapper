@@ -1,6 +1,6 @@
 #  IOS package for using Xray core on client side
 
-Framework source code in  [Mobile wrapper XrayCore](https://github.com/lestar348/xray-core-mobile-wrapper), test macOS
+Framework source code in  [Mobile wrapper XrayCore](https://github.com/lestar348/xray-core-mobile-wrapper)
 
 ### Usage
 
