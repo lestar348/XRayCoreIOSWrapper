@@ -8,7 +8,7 @@
 			<key>BinaryPath</key>
 			<string>XRayCoreIOSWrapper.framework/Versions/A/XRayCoreIOSWrapper</string>
 			<key>LibraryIdentifier</key>
-			<string>ios-arm64_x86_64-maccatalyst</string>
+			<string>macos-arm64_x86_64</string>
 			<key>LibraryPath</key>
 			<string>XRayCoreIOSWrapper.framework</string>
 			<key>SupportedArchitectures</key>
@@ -17,9 +17,7 @@
 				<string>x86_64</string>
 			</array>
 			<key>SupportedPlatform</key>
-			<string>ios</string>
-			<key>SupportedPlatformVariant</key>
-			<string>maccatalyst</string>
+			<string>macos</string>
 		</dict>
 		<dict>
 			<key>BinaryPath</key>
